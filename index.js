@@ -51,14 +51,7 @@ function showMovie(movies){
         movieDiv.appendChild(title)
         movieDiv.appendChild(overview)
         movieDiv.appendChild(releaseDate)
-        movieDiv.appendChild(watchMovieBtn)
 
         resultados.appendChild(movieDiv)
     });
-}
-
-function streamMovie(movieId){
-    fetch(`https://api.justwatch.com/content/titles/movie/${movieId}/locale/en_US`)
-    .then(response => response.json())
-    .then(data => console.log(data))
 }
